@@ -55,6 +55,12 @@
 		3581E31922E720C800E47CF3 /* Circle Trasition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31822E720C800E47CF3 /* Circle Trasition.swift */; };
 		3581E31B22E720EC00E47CF3 /* CircleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31A22E720EC00E47CF3 /* CircleTransition.swift */; };
 		3581E31D22E720FE00E47CF3 /* swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31C22E720FE00E47CF3 /* swipe.swift */; };
+		3581E32022E7214000E47CF3 /* Custom Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31F22E7214000E47CF3 /* Custom Alert.swift */; };
+		3581E32322E7215F00E47CF3 /* TableViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E32222E7215F00E47CF3 /* TableViewTest.swift */; };
+		3581E32522E7217200E47CF3 /* TestingAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E32422E7217200E47CF3 /* TestingAccount.swift */; };
+		3581E32722E7218500E47CF3 /* productCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E32622E7218500E47CF3 /* productCell.swift */; };
+		3581E32922E721A000E47CF3 /* AccountVCOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E32822E721A000E47CF3 /* AccountVCOld.swift */; };
+		3581E32B22E721B300E47CF3 /* profileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E32A22E721B300E47CF3 /* profileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +135,12 @@
 		3581E31822E720C800E47CF3 /* Circle Trasition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle Trasition.swift"; sourceTree = "<group>"; };
 		3581E31A22E720EC00E47CF3 /* CircleTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTransition.swift; sourceTree = "<group>"; };
 		3581E31C22E720FE00E47CF3 /* swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipe.swift; sourceTree = "<group>"; };
+		3581E31F22E7214000E47CF3 /* Custom Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Alert.swift"; sourceTree = "<group>"; };
+		3581E32222E7215F00E47CF3 /* TableViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest.swift; sourceTree = "<group>"; };
+		3581E32422E7217200E47CF3 /* TestingAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAccount.swift; sourceTree = "<group>"; };
+		3581E32622E7218500E47CF3 /* productCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productCell.swift; sourceTree = "<group>"; };
+		3581E32822E721A000E47CF3 /* AccountVCOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVCOld.swift; sourceTree = "<group>"; };
+		3581E32A22E721B300E47CF3 /* profileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +191,8 @@
 		3581E29222E71BC100E47CF3 /* AdemSave */ = {
 			isa = PBXGroup;
 			children = (
+				3581E32122E7215100E47CF3 /* New Group */,
+				3581E31E22E7213000E47CF3 /* Alert */,
 				3581E31722E720B800E47CF3 /* Transition */,
 				3581E31422E7208E00E47CF3 /* SignUp */,
 				3581E30922E7201A00E47CF3 /* Extensions */,
@@ -328,6 +342,26 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
+		3581E31E22E7213000E47CF3 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				3581E31F22E7214000E47CF3 /* Custom Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		3581E32122E7215100E47CF3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3581E32222E7215F00E47CF3 /* TableViewTest.swift */,
+				3581E32422E7217200E47CF3 /* TestingAccount.swift */,
+				3581E32622E7218500E47CF3 /* productCell.swift */,
+				3581E32822E721A000E47CF3 /* AccountVCOld.swift */,
+				3581E32A22E721B300E47CF3 /* profileVC.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -469,6 +503,7 @@
 				3581E2F822E71F4F00E47CF3 /* PantryVC.swift in Sources */,
 				3581E29422E71BC100E47CF3 /* AppDelegate.swift in Sources */,
 				3581E2CE22E71D6600E47CF3 /* BLEHR.swift in Sources */,
+				3581E32522E7217200E47CF3 /* TestingAccount.swift in Sources */,
 				3581E31B22E720EC00E47CF3 /* CircleTransition.swift in Sources */,
 				3581E31922E720C800E47CF3 /* Circle Trasition.swift in Sources */,
 				3581E2DF22E71E3000E47CF3 /* ProductCell.swift in Sources */,
@@ -487,12 +522,15 @@
 				3581E30F22E7205800E47CF3 /* AppDelegateUserLogin.swift in Sources */,
 				3581E30222E71FB900E47CF3 /* settingVC.swift in Sources */,
 				3581E2EF22E71EDF00E47CF3 /* accountViews.swift in Sources */,
+				3581E32022E7214000E47CF3 /* Custom Alert.swift in Sources */,
 				3581E2E122E71E4400E47CF3 /* tabBar.swift in Sources */,
 				3581E30622E71FE300E47CF3 /* PantryVCBackup.swift in Sources */,
 				3581E30B22E7202B00E47CF3 /* Color.swift in Sources */,
 				3581E30022E71FA000E47CF3 /* ProductInfoVC.swift in Sources */,
+				3581E32922E721A000E47CF3 /* AccountVCOld.swift in Sources */,
 				3581E31D22E720FE00E47CF3 /* swipe.swift in Sources */,
 				3581E2E722E71E8700E47CF3 /* ItemLayout.swift in Sources */,
+				3581E32722E7218500E47CF3 /* productCell.swift in Sources */,
 				3581E2D522E71DB000E47CF3 /* PantryDataModel.swift in Sources */,
 				3581E30422E71FCA00E47CF3 /* SearchVC.swift in Sources */,
 				3581E2ED22E71ECB00E47CF3 /* ItemVCLayout.swift in Sources */,
@@ -500,6 +538,8 @@
 				3581E2DD22E71E2100E47CF3 /* AcctCellDesign.swift in Sources */,
 				3581E2FC22E71F7700E47CF3 /* AccountVC.swift in Sources */,
 				3581E2EB22E71EB700E47CF3 /* pantryCellLayout.swift in Sources */,
+				3581E32B22E721B300E47CF3 /* profileVC.swift in Sources */,
+				3581E32322E7215F00E47CF3 /* TableViewTest.swift in Sources */,
 				3581E2DA22E71DE800E47CF3 /* Cloud Storage.swift in Sources */,
 				3581E2C622E71C4300E47CF3 /* FriendsLayout.swift in Sources */,
 			);
