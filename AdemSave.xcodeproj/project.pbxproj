@@ -15,6 +15,15 @@
 		3581E2A122E71BC200E47CF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3581E29F22E71BC200E47CF3 /* LaunchScreen.storyboard */; };
 		3581E2AC22E71BC200E47CF3 /* AdemSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2AB22E71BC200E47CF3 /* AdemSaveTests.swift */; };
 		3581E2B722E71BC200E47CF3 /* AdemSaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2B622E71BC200E47CF3 /* AdemSaveUITests.swift */; };
+		3581E2C622E71C4300E47CF3 /* FriendsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2C522E71C4300E47CF3 /* FriendsLayout.swift */; };
+		3581E2C822E71CEB00E47CF3 /* SettingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2C722E71CEB00E47CF3 /* SettingTVC.swift */; };
+		3581E2CB22E71D3900E47CF3 /* FirebaseFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2CA22E71D3900E47CF3 /* FirebaseFiles.swift */; };
+		3581E2CE22E71D6600E47CF3 /* BLEHR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2CD22E71D6600E47CF3 /* BLEHR.swift */; };
+		3581E2D122E71D8800E47CF3 /* DynamicAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2D022E71D8800E47CF3 /* DynamicAttributes.swift */; };
+		3581E2D322E71D9800E47CF3 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2D222E71D9800E47CF3 /* Products.swift */; };
+		3581E2D522E71DB000E47CF3 /* PantryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2D422E71DB000E47CF3 /* PantryDataModel.swift */; };
+		3581E2D822E71DD300E47CF3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2D722E71DD300E47CF3 /* DataService.swift */; };
+		3581E2DA22E71DE800E47CF3 /* Cloud Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E2D922E71DE800E47CF3 /* Cloud Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		3581E2B222E71BC200E47CF3 /* AdemSaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdemSaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3581E2B622E71BC200E47CF3 /* AdemSaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdemSaveUITests.swift; sourceTree = "<group>"; };
 		3581E2B822E71BC200E47CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3581E2C522E71C4300E47CF3 /* FriendsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsLayout.swift; sourceTree = "<group>"; };
+		3581E2C722E71CEB00E47CF3 /* SettingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTVC.swift; sourceTree = "<group>"; };
+		3581E2CA22E71D3900E47CF3 /* FirebaseFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFiles.swift; sourceTree = "<group>"; };
+		3581E2CD22E71D6600E47CF3 /* BLEHR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEHR.swift; sourceTree = "<group>"; };
+		3581E2D022E71D8800E47CF3 /* DynamicAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicAttributes.swift; sourceTree = "<group>"; };
+		3581E2D222E71D9800E47CF3 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		3581E2D422E71DB000E47CF3 /* PantryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryDataModel.swift; sourceTree = "<group>"; };
+		3581E2D722E71DD300E47CF3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3581E2D922E71DE800E47CF3 /* Cloud Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cloud Storage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,11 @@
 		3581E29222E71BC100E47CF3 /* AdemSave */ = {
 			isa = PBXGroup;
 			children = (
+				3581E2D622E71DC200E47CF3 /* Services */,
+				3581E2CF22E71D7500E47CF3 /* Model */,
+				3581E2CC22E71D5200E47CF3 /* Bluetooth */,
+				3581E2C922E71D1F00E47CF3 /* File Mapping */,
+				3581E2C422E71C2000E47CF3 /* TableViewControllers */,
 				3581E29322E71BC100E47CF3 /* AppDelegate.swift */,
 				3581E29522E71BC100E47CF3 /* ViewController.swift */,
 				3581E29722E71BC100E47CF3 /* Main.storyboard */,
@@ -126,6 +149,50 @@
 				3581E2B822E71BC200E47CF3 /* Info.plist */,
 			);
 			path = AdemSaveUITests;
+			sourceTree = "<group>";
+		};
+		3581E2C422E71C2000E47CF3 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3581E2C522E71C4300E47CF3 /* FriendsLayout.swift */,
+				3581E2C722E71CEB00E47CF3 /* SettingTVC.swift */,
+			);
+			path = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		3581E2C922E71D1F00E47CF3 /* File Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				3581E2CA22E71D3900E47CF3 /* FirebaseFiles.swift */,
+			);
+			path = "File Mapping";
+			sourceTree = "<group>";
+		};
+		3581E2CC22E71D5200E47CF3 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				3581E2CD22E71D6600E47CF3 /* BLEHR.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		3581E2CF22E71D7500E47CF3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3581E2D022E71D8800E47CF3 /* DynamicAttributes.swift */,
+				3581E2D222E71D9800E47CF3 /* Products.swift */,
+				3581E2D422E71DB000E47CF3 /* PantryDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3581E2D622E71DC200E47CF3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3581E2D722E71DD300E47CF3 /* DataService.swift */,
+				3581E2D922E71DE800E47CF3 /* Cloud Storage.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +326,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3581E2D322E71D9800E47CF3 /* Products.swift in Sources */,
 				3581E29622E71BC100E47CF3 /* ViewController.swift in Sources */,
+				3581E2C822E71CEB00E47CF3 /* SettingTVC.swift in Sources */,
 				3581E29422E71BC100E47CF3 /* AppDelegate.swift in Sources */,
+				3581E2CE22E71D6600E47CF3 /* BLEHR.swift in Sources */,
+				3581E2D822E71DD300E47CF3 /* DataService.swift in Sources */,
 				3581E29C22E71BC100E47CF3 /* AdemSave.xcdatamodeld in Sources */,
+				3581E2CB22E71D3900E47CF3 /* FirebaseFiles.swift in Sources */,
+				3581E2D522E71DB000E47CF3 /* PantryDataModel.swift in Sources */,
+				3581E2D122E71D8800E47CF3 /* DynamicAttributes.swift in Sources */,
+				3581E2DA22E71DE800E47CF3 /* Cloud Storage.swift in Sources */,
+				3581E2C622E71C4300E47CF3 /* FriendsLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
