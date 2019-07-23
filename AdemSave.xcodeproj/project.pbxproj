@@ -46,6 +46,15 @@
 		3581E30422E71FCA00E47CF3 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E30322E71FCA00E47CF3 /* SearchVC.swift */; };
 		3581E30622E71FE300E47CF3 /* PantryVCBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E30522E71FE300E47CF3 /* PantryVCBackup.swift */; };
 		3581E30822E71FFA00E47CF3 /* accountBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E30722E71FFA00E47CF3 /* accountBackup.swift */; };
+		3581E30B22E7202B00E47CF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E30A22E7202B00E47CF3 /* Color.swift */; };
+		3581E30D22E7204100E47CF3 /* Design.Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E30C22E7204100E47CF3 /* Design.Elements.swift */; };
+		3581E30F22E7205800E47CF3 /* AppDelegateUserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E30E22E7205800E47CF3 /* AppDelegateUserLogin.swift */; };
+		3581E31122E7206E00E47CF3 /* Delete cell extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31022E7206E00E47CF3 /* Delete cell extension.swift */; };
+		3581E31322E7207C00E47CF3 /* toolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31222E7207C00E47CF3 /* toolBar.swift */; };
+		3581E31622E720A700E47CF3 /* SignUpInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31522E720A700E47CF3 /* SignUpInfo.swift */; };
+		3581E31922E720C800E47CF3 /* Circle Trasition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31822E720C800E47CF3 /* Circle Trasition.swift */; };
+		3581E31B22E720EC00E47CF3 /* CircleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31A22E720EC00E47CF3 /* CircleTransition.swift */; };
+		3581E31D22E720FE00E47CF3 /* swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581E31C22E720FE00E47CF3 /* swipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +120,15 @@
 		3581E30322E71FCA00E47CF3 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		3581E30522E71FE300E47CF3 /* PantryVCBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryVCBackup.swift; sourceTree = "<group>"; };
 		3581E30722E71FFA00E47CF3 /* accountBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountBackup.swift; sourceTree = "<group>"; };
+		3581E30A22E7202B00E47CF3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3581E30C22E7204100E47CF3 /* Design.Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.Elements.swift; sourceTree = "<group>"; };
+		3581E30E22E7205800E47CF3 /* AppDelegateUserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateUserLogin.swift; sourceTree = "<group>"; };
+		3581E31022E7206E00E47CF3 /* Delete cell extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Delete cell extension.swift"; sourceTree = "<group>"; };
+		3581E31222E7207C00E47CF3 /* toolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toolBar.swift; sourceTree = "<group>"; };
+		3581E31522E720A700E47CF3 /* SignUpInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInfo.swift; sourceTree = "<group>"; };
+		3581E31822E720C800E47CF3 /* Circle Trasition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle Trasition.swift"; sourceTree = "<group>"; };
+		3581E31A22E720EC00E47CF3 /* CircleTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTransition.swift; sourceTree = "<group>"; };
+		3581E31C22E720FE00E47CF3 /* swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +179,9 @@
 		3581E29222E71BC100E47CF3 /* AdemSave */ = {
 			isa = PBXGroup;
 			children = (
+				3581E31722E720B800E47CF3 /* Transition */,
+				3581E31422E7208E00E47CF3 /* SignUp */,
+				3581E30922E7201A00E47CF3 /* Extensions */,
 				3581E2F022E71EFE00E47CF3 /* Controllers */,
 				3581E2DB22E71E0100E47CF3 /* Views */,
 				3581E2D622E71DC200E47CF3 /* Services */,
@@ -275,6 +296,36 @@
 				3581E30722E71FFA00E47CF3 /* accountBackup.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3581E30922E7201A00E47CF3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3581E30A22E7202B00E47CF3 /* Color.swift */,
+				3581E30C22E7204100E47CF3 /* Design.Elements.swift */,
+				3581E30E22E7205800E47CF3 /* AppDelegateUserLogin.swift */,
+				3581E31022E7206E00E47CF3 /* Delete cell extension.swift */,
+				3581E31222E7207C00E47CF3 /* toolBar.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3581E31422E7208E00E47CF3 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				3581E31522E720A700E47CF3 /* SignUpInfo.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		3581E31722E720B800E47CF3 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				3581E31822E720C800E47CF3 /* Circle Trasition.swift */,
+				3581E31A22E720EC00E47CF3 /* CircleTransition.swift */,
+				3581E31C22E720FE00E47CF3 /* swipe.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,20 +469,29 @@
 				3581E2F822E71F4F00E47CF3 /* PantryVC.swift in Sources */,
 				3581E29422E71BC100E47CF3 /* AppDelegate.swift in Sources */,
 				3581E2CE22E71D6600E47CF3 /* BLEHR.swift in Sources */,
+				3581E31B22E720EC00E47CF3 /* CircleTransition.swift in Sources */,
+				3581E31922E720C800E47CF3 /* Circle Trasition.swift in Sources */,
 				3581E2DF22E71E3000E47CF3 /* ProductCell.swift in Sources */,
 				3581E2D822E71DD300E47CF3 /* DataService.swift in Sources */,
 				3581E2E922E71E9F00E47CF3 /* settingsLayout.swift in Sources */,
+				3581E31622E720A700E47CF3 /* SignUpInfo.swift in Sources */,
+				3581E31322E7207C00E47CF3 /* toolBar.swift in Sources */,
+				3581E30D22E7204100E47CF3 /* Design.Elements.swift in Sources */,
+				3581E31122E7206E00E47CF3 /* Delete cell extension.swift in Sources */,
 				3581E2F622E71F3E00E47CF3 /* ItemVC.swift in Sources */,
 				3581E29C22E71BC100E47CF3 /* AdemSave.xcdatamodeld in Sources */,
 				3581E2CB22E71D3900E47CF3 /* FirebaseFiles.swift in Sources */,
 				3581E2F222E71F1700E47CF3 /* Login Screen.swift in Sources */,
 				3581E2F422E71F2800E47CF3 /* ListVC.swift in Sources */,
 				3581E2E322E71E5C00E47CF3 /* CellLayout.swift in Sources */,
+				3581E30F22E7205800E47CF3 /* AppDelegateUserLogin.swift in Sources */,
 				3581E30222E71FB900E47CF3 /* settingVC.swift in Sources */,
 				3581E2EF22E71EDF00E47CF3 /* accountViews.swift in Sources */,
 				3581E2E122E71E4400E47CF3 /* tabBar.swift in Sources */,
 				3581E30622E71FE300E47CF3 /* PantryVCBackup.swift in Sources */,
+				3581E30B22E7202B00E47CF3 /* Color.swift in Sources */,
 				3581E30022E71FA000E47CF3 /* ProductInfoVC.swift in Sources */,
+				3581E31D22E720FE00E47CF3 /* swipe.swift in Sources */,
 				3581E2E722E71E8700E47CF3 /* ItemLayout.swift in Sources */,
 				3581E2D522E71DB000E47CF3 /* PantryDataModel.swift in Sources */,
 				3581E30422E71FCA00E47CF3 /* SearchVC.swift in Sources */,
