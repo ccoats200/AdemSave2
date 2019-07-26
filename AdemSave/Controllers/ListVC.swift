@@ -22,15 +22,15 @@ class listCollectionView: UICollectionViewController, UICollectionViewDelegateFl
     var docRef: DocumentReference!
     var handle: AuthStateDidChangeListenerHandle?
     let user = Auth.auth().currentUser
-    let minimuPasswordCount = 6
     
     let mostRecent = "most recent"
     let productRFIDNumber = "3860407808"
     
+    
+    
     //reuse ID's
     let cellID = "product"
     let headerID = "collectionViewHeader"
-    
     
     var products: [groceryItemCellContent]? = {
         
@@ -63,7 +63,7 @@ class listCollectionView: UICollectionViewController, UICollectionViewDelegateFl
     //
     var groceriesSelected = [String]()
     var groceryItemSelected = [IndexPath]()
-    //ToolBar
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

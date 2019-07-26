@@ -18,7 +18,6 @@ class AccountVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     //var docRef: DocumentReference!
     //var handle: AuthStateDidChangeListenerHandle?
     let user = Auth.auth().currentUser
-    
     var accountStuff: ProfileView!
     
     //Cell Id's
@@ -117,7 +116,7 @@ class AccountVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         //userName.font = UIFont(name: "Lato", size: 80)
         userName.font = UIFont.boldSystemFont(ofSize: 20)
         userName.textColor = UIColor.ademBlue
-        //userName.text = "Coleman"
+        userName.text = "Coleman"
         userName.translatesAutoresizingMaskIntoConstraints = false
         print("sets the item name")
         return userName
@@ -220,7 +219,7 @@ class AccountVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                 //let photoURL = user.photoURL
                 //let uid = user.uid
                 
-                let doesNotHaveAccount = "Welcome"
+//                let doesNotHaveAccount = "Welcome"
                 
                 self.nameofUser.text = nameOfUser
             }

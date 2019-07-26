@@ -19,7 +19,6 @@ class productVCLayout: UIViewController {
     var docRef: DocumentReference!
     var handle: AuthStateDidChangeListenerHandle?
     let user = Auth.auth().currentUser
-    let minimuPasswordCount = 6
     
     let atTop = CGFloat(0.0)
     var likeReallyAtTop = false
@@ -27,10 +26,8 @@ class productVCLayout: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         scrolling.isScrollEnabled = true
-        
+        view.layer.cornerRadius = 15
         view.backgroundColor = UIColor.ademGreen
         
         view.addSubview(scrolling)
@@ -58,10 +55,8 @@ class productVCLayout: UIViewController {
             let gesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
             gesture.direction = direction
             self.view.addGestureRecognizer(gesture)
-            
         }
     }
-    
     
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
         print("\(sender.direction) is where swiper is going")
@@ -72,7 +67,6 @@ class productVCLayout: UIViewController {
             likeReallyAtTop = false
         }
     }
-    
     
     var initialTouchPoint: CGPoint = CGPoint(x: 0,y: 0)
     
@@ -108,11 +102,14 @@ class productVCLayout: UIViewController {
     }()
     
     
-    let backgrounLightColor: UIView = {
+    let imageMatting: UIView = {
         let lightColor = UIView()
         lightColor.backgroundColor = UIColor.white.withAlphaComponent(0.10)
         lightColor.translatesAutoresizingMaskIntoConstraints = false
         lightColor.layer.masksToBounds = true
+        lightColor.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        lightColor.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        lightColor.layer.cornerRadius = 150
         
         return lightColor
     }()
@@ -128,17 +125,21 @@ class productVCLayout: UIViewController {
         productImageDesign.layer.borderWidth = 1
         productImageDesign.layer.borderColor = UIColor.white.cgColor
         productImageDesign.translatesAutoresizingMaskIntoConstraints = false
+        productImageDesign.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        productImageDesign.heightAnchor.constraint(equalToConstant: 200).isActive = true //125 also looks good
         print("Created Image for the product image in the details VC")
         
         return productImageDesign
     }()
     
-    let alwaysNotify: UIImageView = {
-        let noitfy = UIImageView()
-        noitfy.image = UIImage(named: "fave")
-        noitfy.translatesAutoresizingMaskIntoConstraints = false
-        noitfy.contentMode = .scaleAspectFit
-        return noitfy
+    let alwaysNotify: UIButton = {
+        let notify = UIButton()
+        let notifyImage = UIImage(named: "fave")
+        notify.setImage(notifyImage, for: .normal)
+        notify.translatesAutoresizingMaskIntoConstraints = false
+        notify.contentMode = .scaleAspectFit
+        notify.backgroundColor = UIColor.blue
+        return notify
     }()
     
     
@@ -155,7 +156,6 @@ class productVCLayout: UIViewController {
     
     //product Button
     @objc func handleFacts() {
-        
         let signUpInfo = login()
         self.present(signUpInfo, animated: true)
         print("went to new page")
@@ -190,6 +190,7 @@ class productVCLayout: UIViewController {
         price.layer.cornerRadius = 5
         price.layer.masksToBounds = true
         price.text = "$\(cost)"
+        price.font = UIFont.boldSystemFont(ofSize: 16)
         return price
     }()
     
@@ -207,10 +208,7 @@ class productVCLayout: UIViewController {
         
         return NutLbl
     }()
-    
-    
-    
-    
+ 
     lazy var backButton: UIButton = {
         let back = UIButton(type: .system)
         back.setTitle("Berries", for: .normal)
@@ -241,7 +239,7 @@ class productVCLayout: UIViewController {
         
         
         scrolling.addSubview(backButton)
-        scrolling.addSubview(backgrounLightColor)
+        scrolling.addSubview(imageMatting)
         scrolling.addSubview(productInfoHolder)
         scrolling.addSubview(NurtritionLabel)
         scrolling.addSubview(productImage)
@@ -252,36 +250,29 @@ class productVCLayout: UIViewController {
         scrolling.addSubview(calLabel)
         scrolling.addSubview(priceLabel)
         
-        setuploginFieldView()
+        setupProductImageAttributes()
         setupproductInfoHolder()
         setupproductNutritionLabel()
         
     }
     
     
-    func setuploginFieldView() {
+    func setupProductImageAttributes() {
         
-        backButton.topAnchor.constraint(equalTo: scrolling.topAnchor, constant: 5).isActive = true
+        backButton.topAnchor.constraint(equalTo: scrolling.topAnchor, constant: 15).isActive = true
         backButton.centerXAnchor.constraint(equalTo: scrolling.centerXAnchor).isActive = true
         backButton.widthAnchor.constraint(equalTo: scrolling.widthAnchor, constant: -50).isActive = true
         backButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         backButton.layer.cornerRadius = 20
         
-        backgrounLightColor.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 10).isActive = true
-        backgrounLightColor.centerXAnchor.constraint(equalTo: backButton.centerXAnchor).isActive = true
-        backgrounLightColor.widthAnchor.constraint(equalTo: backButton.widthAnchor, constant: -50).isActive = true
-        backgrounLightColor.heightAnchor.constraint(equalToConstant: 300).isActive = true
-        backgrounLightColor.layer.cornerRadius = 140 //(view.frame.width + -50)/2
-        
+        imageMatting.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 10).isActive = true
+        imageMatting.centerXAnchor.constraint(equalTo: backButton.centerXAnchor).isActive = true
         
         //login Fields
         //productImage.topAnchor.constraint(equalTo: backgrounLightColor.topAnchor, constant: 5).isActive = true
-        productImage.centerXAnchor.constraint(equalTo: backgrounLightColor.centerXAnchor).isActive = true
-        productImage.centerYAnchor.constraint(equalTo: backgrounLightColor.centerYAnchor).isActive = true
-        productImage.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        productImage.heightAnchor.constraint(equalToConstant: 200).isActive = true //125 also looks good
-        
-        
+        productImage.centerXAnchor.constraint(equalTo: imageMatting.centerXAnchor).isActive = true
+        productImage.centerYAnchor.constraint(equalTo: imageMatting.centerYAnchor).isActive = true
+
     }
     
     
@@ -300,35 +291,17 @@ class productVCLayout: UIViewController {
         scrolling.addSubview(healthInfoStackView)
         
         
-        productInfoHolder.topAnchor.constraint(equalTo: backgrounLightColor.bottomAnchor, constant: 5).isActive = true
+        productInfoHolder.topAnchor.constraint(equalTo: imageMatting.bottomAnchor, constant: 15).isActive = true
         productInfoHolder.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
-        productInfoHolder.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -50).isActive = true
+        productInfoHolder.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
         productInfoHolder.heightAnchor.constraint(equalToConstant: 300).isActive = true
         productInfoHolder.layer.cornerRadius = 10
         
-        /*
-         //nutrition labels
-         healthfFacts.topAnchor.constraint(equalTo: productInfoHolder.topAnchor, constant: 5).isActive = true
-         healthfFacts.leftAnchor.constraint(equalTo: productInfoHolder.leftAnchor, constant: 10).isActive = true
-         healthfFacts.widthAnchor.constraint(equalToConstant: 25).isActive = true
-         healthfFacts.heightAnchor.constraint(equalToConstant: 25).isActive = true
-         
-         */
-        
         healthInfoStackView.topAnchor.constraint(equalTo: productInfoHolder.topAnchor, constant: 5).isActive = true
-        healthInfoStackView.leadingAnchor.constraint(equalTo: productInfoHolder.safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
-        healthInfoStackView.trailingAnchor.constraint(equalTo: productInfoHolder.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
-        //healthInfoStackView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        healthInfoStackView.leadingAnchor.constraint(equalTo: productInfoHolder.leadingAnchor, constant: 5).isActive = true
+        //healthInfoStackView.trailingAnchor.constraint(equalTo: productInfoHolder.trailingAnchor, constant: -5).isActive = true
+        healthInfoStackView.widthAnchor.constraint(equalToConstant: 100).isActive = true
         healthInfoStackView.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        
-        /*
-         //nutrition labels
-         alwaysNotify.topAnchor.constraint(equalTo: productInfoHolder.topAnchor, constant: 5).isActive = true
-         alwaysNotify.rightAnchor.constraint(equalTo: productInfoHolder.rightAnchor, constant: -10).isActive = true
-         alwaysNotify.widthAnchor.constraint(equalToConstant: 25).isActive = true
-         alwaysNotify.heightAnchor.constraint(equalToConstant: 25).isActive = true
-         */
-        
         
         //calories
         calLabel.topAnchor.constraint(equalTo: alwaysNotify.bottomAnchor, constant: 5).isActive = true
@@ -337,8 +310,8 @@ class productVCLayout: UIViewController {
         calLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         //calories
-        priceLabel.topAnchor.constraint(equalTo: alwaysNotify.bottomAnchor, constant: 5).isActive = true
-        priceLabel.rightAnchor.constraint(equalTo: productInfoHolder.rightAnchor, constant: 12).isActive = true
+        priceLabel.topAnchor.constraint(equalTo: productInfoHolder.topAnchor, constant: 5).isActive = true
+        priceLabel.rightAnchor.constraint(equalTo: productInfoHolder.rightAnchor, constant: 10).isActive = true
         priceLabel.widthAnchor.constraint(equalToConstant: 75).isActive = true
         priceLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
@@ -348,7 +321,7 @@ class productVCLayout: UIViewController {
         
         NurtritionLabel.topAnchor.constraint(equalTo: productInfoHolder.bottomAnchor, constant: 5).isActive = true
         NurtritionLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
-        NurtritionLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -50).isActive = true
+        NurtritionLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -25).isActive = true
         NurtritionLabel.heightAnchor.constraint(equalToConstant: 300).isActive = true
         NurtritionLabel.layer.cornerRadius = 10
         
